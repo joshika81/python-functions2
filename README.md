@@ -48,3 +48,39 @@ print(times_3(10))
 ............output..............
 10
 30
+
+
+
+def titled(title):
+    def greet(name):
+        return f"hello,{title}{name}"
+    return greet
+MR_greet=titled("Mr.")
+DR_greet=titled("Dr.")
+print(MR_greet("jyothika"))
+print(DR_greet("jelly fish"))
+............output..............
+hello,Mr.jyothika
+hello,Dr.jelly fish
+
+
+
+
+total=0
+def add_subject_marks():
+    global total
+    marks=int(input("enter marks of a subject:"))
+    total+=marks
+    return marks
+print("subject1 marks:",add_subject_marks())
+print("subject2 marks:",add_subject_marks())
+print("subject3 marks:",add_subject_marks())
+print("Total marks stored in global:", total)
+............output..............
+enter marks of a subject: 89
+subject1 marks: 89
+enter marks of a subject: 56
+subject2 marks: 56
+enter marks of a subject: 67
+subject3 marks: 67
+Total marks stored in global: 212
